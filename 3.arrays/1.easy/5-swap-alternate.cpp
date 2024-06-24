@@ -41,3 +41,50 @@ void swapAlternate(int *arr, int size)
         }
     }
 }
+
+// approach 2:
+
+// #include <iostream>
+// using namespace std;
+
+// void swap(int &a, int &b)
+// {
+//     a = a + b;
+//     b = a - b;
+//     a = a - b;
+// }
+
+// int main()
+// {
+//     int arr[] = {10, 20}; // Example array with two elements to swap
+//     cout << "Before swap: " << arr[0] << " " << arr[1] << endl;
+
+//     swap(arr[0], arr[1]); // Swapping elements
+
+//     cout << "After swap: " << arr[0] << " " << arr[1] << endl;
+//     return 0;
+// }
+
+// approach 3:
+// This method won’t cause overflow, but it’s only applicable to integral data types.Also, make sure that a and b are not the same variable, as this would set it to zero.
+
+// #include <iostream>
+// using namespace std;
+
+// void swap(int &a, int &b)
+// {
+//     a = a ^ b;
+//     b = a ^ b;
+//     a = a ^ b;
+// }
+
+// int main()
+// {
+//     int arr[] = {10, 20}; // Example array with two elements to swap
+//     cout << "Before swap: " << arr[0] << " " << arr[1] << endl;
+
+//     swap(arr[0], arr[1]); // Swapping elements using XOR
+
+//     cout << "After swap: " << arr[0] << " " << arr[1] << endl;
+//     return 0;
+// }
