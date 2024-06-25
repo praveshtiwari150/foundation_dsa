@@ -41,3 +41,31 @@ int main()
 
     return 0;
 }
+
+
+
+//approach 2: using xor
+#include <iostream>
+
+void reverseArray(int arr[], int size) {
+    for (int i = 0; i < size / 2; ++i) {
+        arr[i] ^= arr[size - 1 - i];
+        arr[size - 1 - i] ^= arr[i];
+        arr[i] ^= arr[size - 1 - i];
+    }
+}
+
+int main() {
+    int myArray[] = {1, 2, 3, 4, 5};
+    int size = sizeof(myArray) / sizeof(myArray[0]);
+
+    reverseArray(myArray, size);
+
+    // Print the reversed array
+    for (int i = 0; i < size; ++i) {
+        std::cout << myArray[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
