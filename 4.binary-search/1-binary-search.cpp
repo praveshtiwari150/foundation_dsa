@@ -3,7 +3,9 @@ using namespace std;
 
 int binarySearch(int arr[], int size, int key)
 {
-    int s = 0, e = size - 1;
+    int s = 0;
+    int e = size - 1;
+
     int mid = s + (e - s) / 2;
 
     while (s <= e)
@@ -32,8 +34,14 @@ int binarySearch(int arr[], int size, int key)
 int main()
 {
     int arr[5] = {3, 7, 12, 15, 21};
-    int key = 21;
-    int result = binarySearch(arr, 5, 21);
+    int key = 3;
+    int result = binarySearch(arr, 5, key);
 
-    cout << "The result of  binary search is " << result;
+    if(result != -1){
+        cout << "The element " << key << " is present at index " << result;
+    }
+
+    else{
+        cout << "The element " << key << " not found " << endl;
+    }
 }
