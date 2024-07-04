@@ -1,0 +1,8 @@
+1. Range-based for loop (since C++11):
+Iterator with auto (since C++11):
+Classic for loop with iterators:
+While loop with iterators:
+C++11 Lambda function with std::for_each:
+Using std::for_each with a function object:
+C++17 Structured bindings (for simple and clean code):
+C++20 Ranges (for more expressive code):
